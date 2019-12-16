@@ -1,0 +1,658 @@
+2019-12-17 08:42:41.735  INFO 3292 --- [JavaFX-Launcher] o.s.boot.SpringApplication               : Starting application on Owner-PC with PID 3292 (started by Owner in C:\Program Files\Downlord's FAF Client)
+2019-12-17 08:42:41.739  INFO 3292 --- [JavaFX-Launcher] o.s.boot.SpringApplication               : The following profiles are active: windows,prod
+2019-12-17 08:42:43.265  INFO 3292 --- [JavaFX-Launcher] trationDelegate$BeanPostProcessorChecker : Bean 'asyncConfig' of type [com.faforever.client.config.AsyncConfig$$EnhancerBySpringCGLIB$$4f9449cf] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-17 08:42:43.358  INFO 3292 --- [JavaFX-Launcher] trationDelegate$BeanPostProcessorChecker : Bean 'cacheConfig' of type [com.faforever.client.config.CacheConfig$$EnhancerBySpringCGLIB$$b0d2fd15] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-17 08:42:43.674  INFO 3292 --- [JavaFX-Launcher] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2019-12-17 08:42:44.267  INFO 3292 --- [JavaFX-Launcher] c.f.c.map.generator.MapGeneratorService  : Deleting leftover generated maps...
+2019-12-17 08:42:44.270  WARN 3292 --- [JavaFX-Launcher] com.faforever.client.map.MapService      : Could not load maps: installation path is not set
+2019-12-17 08:42:44.434  INFO 3292 --- [JavaFX-Launcher] com.faforever.client.update.Version      : The current application version is: 1.1.0
+2019-12-17 08:42:44.439  INFO 3292 --- [JavaFX-Launcher] c.f.c.update.ClientUpdateServiceImpl     : Current version: 1.1.0
+2019-12-17 08:42:44.485  INFO 3292 --- [pool-3-thread-2] c.f.client.update.CheckForUpdateTask     : Checking for client update
+2019-12-17 08:42:44.822  INFO 3292 --- [JavaFX-Launcher] o.s.boot.SpringApplication               : Started application in 3.917 seconds (JVM running for 6.662)
+2019-12-17 08:42:47.212  INFO 3292 --- [ForkJoinPool.commonPool-worker-1] com.faforever.client.update.Version      : fromVersion '1' is not newer than toVersion '1.1'. No update is required.
+2019-12-17 08:42:49.420  INFO 3292 --- [Timer-0] c.f.c.discord.ClientDiscordEventHandler  : Discord is ready with user 'TheGoldenBunni'
+2019-12-17 08:49:33.417  INFO 3292 --- [Thread-11] c.f.client.remote.FafServerAccessorImpl  : Trying to connect to FAF server at lobby.faforever.com:8001
+2019-12-17 08:49:33.812  INFO 3292 --- [Thread-11] c.f.client.remote.FafServerAccessorImpl  : FAF server connection established
+2019-12-17 08:49:34.162  INFO 3292 --- [Thread-11] c.f.client.remote.FafServerAccessorImpl  : FAF session initiated, session ID: 3091750782
+2019-12-17 08:49:37.400  INFO 3292 --- [Thread-11] c.f.client.remote.FafServerAccessorImpl  : FAF login succeeded
+2019-12-17 08:49:37.825  INFO 3292 --- [pool-3-thread-5] c.f.client.chat.PircBotXChatService      : Connecting to IRC at irc.faforever.com:6697
+2019-12-17 08:49:37.832  INFO 3292 --- [JavaFX Application Thread] com.faforever.client.update.Version      : fromVersion '1.1' is not newer than toVersion '1.1'. No update is required.
+2019-12-17 08:50:16.651  INFO 3292 --- [JavaFX Application Thread] com.faforever.client.game.GameService    : Joining game: 'Noobs <800' (10690167)
+2019-12-17 08:50:17.370  WARN 3292 --- [JavaFX Application Thread] c.f.c.patch.BireusFeaturedModUpdater     : Error while testing http://content.faforever.com/bireus/faf/
+
+java.io.FileNotFoundException: http://content.faforever.com/bireus/faf//info.json
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(Unknown Source)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(Unknown Source)
+	at java.base/java.net.URL.openStream(Unknown Source)
+	at com.fasterxml.jackson.core.JsonFactory._optimizedStreamFromURL(JsonFactory.java:1595)
+	at com.fasterxml.jackson.core.JsonFactory.createParser(JsonFactory.java:793)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:2959)
+	at com.faforever.client.patch.BireusFeaturedModUpdater.canUpdate(BireusFeaturedModUpdater.java:57)
+	at com.faforever.client.patch.GameUpdaterImpl.updateFeaturedMod(GameUpdaterImpl.java:159)
+	at com.faforever.client.patch.GameUpdaterImpl.update(GameUpdaterImpl.java:70)
+	at com.faforever.client.game.GameService.updateGameIfNecessary(GameService.java:465)
+	at com.faforever.client.game.GameService.lambda$joinGame$6(GameService.java:298)
+	at java.base/java.util.concurrent.CompletableFuture.uniComposeStage(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture.thenCompose(Unknown Source)
+	at com.faforever.client.game.GameService.joinGame(GameService.java:298)
+	at com.faforever.client.game.JoinGameHelper.join(JoinGameHelper.java:85)
+	at com.faforever.client.game.JoinGameHelper.join(JoinGameHelper.java:59)
+	at com.faforever.client.game.GamesTableController.lambda$gamesRowFactory$33(GamesTableController.java:219)
+	at javafx.base/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(Unknown Source)
+	at javafx.base/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(Unknown Source)
+	at javafx.base/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(Unknown Source)
+	at javafx.base/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(Unknown Source)
+	at javafx.base/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at javafx.base/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at javafx.base/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at javafx.base/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at javafx.base/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at javafx.base/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at javafx.base/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at javafx.base/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at javafx.base/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at javafx.base/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at javafx.base/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at javafx.base/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at javafx.base/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at javafx.base/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at javafx.base/com.sun.javafx.event.EventUtil.fireEventImpl(Unknown Source)
+	at javafx.base/com.sun.javafx.event.EventUtil.fireEvent(Unknown Source)
+	at javafx.base/javafx.event.Event.fireEvent(Unknown Source)
+	at javafx.graphics/javafx.scene.Scene$ClickGenerator.postProcess(Unknown Source)
+	at javafx.graphics/javafx.scene.Scene$ClickGenerator.access$8300(Unknown Source)
+	at javafx.graphics/javafx.scene.Scene$MouseHandler.process(Unknown Source)
+	at javafx.graphics/javafx.scene.Scene$MouseHandler.access$1300(Unknown Source)
+	at javafx.graphics/javafx.scene.Scene.processMouseEvent(Unknown Source)
+	at javafx.graphics/javafx.scene.Scene$ScenePeerListener.mouseEvent(Unknown Source)
+	at javafx.graphics/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(Unknown Source)
+	at javafx.graphics/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at javafx.graphics/com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$2(Unknown Source)
+	at javafx.graphics/com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(Unknown Source)
+	at javafx.graphics/com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(Unknown Source)
+	at javafx.graphics/com.sun.glass.ui.View.handleMouseEvent(Unknown Source)
+	at javafx.graphics/com.sun.glass.ui.View.notifyMouse(Unknown Source)
+	at javafx.graphics/com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at javafx.graphics/com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+
+2019-12-17 08:50:27.543  WARN 3292 --- [JavaFX Application Thread] javafx.css                               : Could not resolve '-fx-text-base-color' while resolving lookups for '-fx-text-fill' from rule '*.label' in stylesheet jar:file:/C:/Program%20Files/Downlord's%20FAF%20Client/lib/downlords-faf-client-1.1.0.jar!/theme/style.css
+2019-12-17 08:50:27.544  WARN 3292 --- [JavaFX Application Thread] javafx.css                               : Could not resolve '-fx-text-base-color' while resolving lookups for '-fx-text-fill' from rule '*.label' in stylesheet jar:file:/C:/Program%20Files/Downlord's%20FAF%20Client/lib/downlords-faf-client-1.1.0.jar!/theme/style.css
+2019-12-17 08:50:27.545  WARN 3292 --- [JavaFX Application Thread] javafx.css                               : Caught 'java.lang.ClassCastException: java.base/java.lang.String cannot be cast to javafx.graphics@10.0.2/javafx.scene.paint.Color' while converting value for '-fx-effect' from rule '*.card' in stylesheet jar:file:/C:/Program%20Files/Downlord's%20FAF%20Client/lib/downlords-faf-client-1.1.0.jar!/theme/style.css
+2019-12-17 08:50:27.546  WARN 3292 --- [JavaFX Application Thread] javafx.css                               : Caught 'java.lang.ClassCastException: java.base/java.lang.String cannot be cast to javafx.graphics@10.0.2/javafx.scene.paint.Color' while converting value for '-fx-effect' from rule '*.card' in stylesheet jar:file:/C:/Program%20Files/Downlord's%20FAF%20Client/lib/downlords-faf-client-1.1.0.jar!/theme/style.css
+2019-12-17 08:50:27.547  WARN 3292 --- [JavaFX Application Thread] javafx.css                               : Caught 'java.lang.ClassCastException: java.base/java.lang.String cannot be cast to javafx.graphics@10.0.2/javafx.scene.paint.Color' while converting value for '-fx-effect' from rule '*.card' in stylesheet jar:file:/C:/Program%20Files/Downlord's%20FAF%20Client/lib/downlords-faf-client-1.1.0.jar!/theme/style.css
+2019-12-17 08:50:27.547  WARN 3292 --- [JavaFX Application Thread] javafx.css                               : Caught 'java.lang.ClassCastException: java.base/java.lang.String cannot be cast to javafx.graphics@10.0.2/javafx.scene.paint.Paint' while converting value for '-fx-background-color' from rule '*.card' in stylesheet jar:file:/C:/Program%20Files/Downlord's%20FAF%20Client/lib/downlords-faf-client-1.1.0.jar!/theme/style.css
+2019-12-17 08:50:27.547  WARN 3292 --- [JavaFX Application Thread] javafx.css                               : Could not resolve '-fx-text-base-color' while resolving lookups for '-fx-text-fill' from rule '*.label' in stylesheet jar:file:/C:/Program%20Files/Downlord's%20FAF%20Client/lib/downlords-faf-client-1.1.0.jar!/theme/style.css
+2019-12-17 08:50:27.563  WARN 3292 --- [JavaFX Application Thread] javafx.css                               : Could not resolve '-fx-text-base-color' while resolving lookups for '-fx-text-fill' from rule '*.label' in stylesheet jar:file:/C:/Program%20Files/Downlord's%20FAF%20Client/lib/downlords-faf-client-1.1.0.jar!/theme/style.css
+2019-12-17 08:50:27.564  WARN 3292 --- [JavaFX Application Thread] javafx.css                               : Could not resolve '-fx-text-base-color' while resolving lookups for '-fx-text-fill' from rule '*.label' in stylesheet jar:file:/C:/Program%20Files/Downlord's%20FAF%20Client/lib/downlords-faf-client-1.1.0.jar!/theme/style.css
+2019-12-17 08:50:27.565  WARN 3292 --- [JavaFX Application Thread] javafx.css                               : Could not resolve '-fx-text-base-color' while resolving lookups for '-fx-text-fill' from rule '*.label' in stylesheet jar:file:/C:/Program%20Files/Downlord's%20FAF%20Client/lib/downlords-faf-client-1.1.0.jar!/theme/style.css
+2019-12-17 08:50:27.565  WARN 3292 --- [JavaFX Application Thread] javafx.css                               : Could not resolve '-fx-text-base-color' while resolving lookups for '-fx-text-fill' from rule '*.label' in stylesheet jar:file:/C:/Program%20Files/Downlord's%20FAF%20Client/lib/downlords-faf-client-1.1.0.jar!/theme/style.css
+2019-12-17 08:50:27.566  WARN 3292 --- [JavaFX Application Thread] javafx.css                               : Could not resolve '-fx-text-base-color' while resolving lookups for '-fx-text-fill' from rule '*.label' in stylesheet jar:file:/C:/Program%20Files/Downlord's%20FAF%20Client/lib/downlords-faf-client-1.1.0.jar!/theme/style.css
+2019-12-17 08:50:27.567  WARN 3292 --- [JavaFX Application Thread] javafx.css                               : Could not resolve '-fx-text-base-color' while resolving lookups for '-fx-text-fill' from rule '*.label' in stylesheet jar:file:/C:/Program%20Files/Downlord's%20FAF%20Client/lib/downlords-faf-client-1.1.0.jar!/theme/style.css
+2019-12-17 08:50:27.567  WARN 3292 --- [JavaFX Application Thread] javafx.css                               : Could not resolve '-fx-text-base-color' while resolving lookups for '-fx-text-fill' from rule '*.label' in stylesheet jar:file:/C:/Program%20Files/Downlord's%20FAF%20Client/lib/downlords-faf-client-1.1.0.jar!/theme/style.css
+2019-12-17 08:50:27.568  WARN 3292 --- [JavaFX Application Thread] javafx.css                               : Could not resolve '-fx-text-base-color' while resolving lookups for '-fx-text-fill' from rule '*.label' in stylesheet jar:file:/C:/Program%20Files/Downlord's%20FAF%20Client/lib/downlords-faf-client-1.1.0.jar!/theme/style.css
+2019-12-17 08:50:27.568  WARN 3292 --- [JavaFX Application Thread] javafx.css                               : Could not resolve '-fx-text-base-color' while resolving lookups for '-fx-text-fill' from rule '*.label' in stylesheet jar:file:/C:/Program%20Files/Downlord's%20FAF%20Client/lib/downlords-faf-client-1.1.0.jar!/theme/style.css
+2019-12-17 08:50:27.569  WARN 3292 --- [JavaFX Application Thread] javafx.css                               : Could not resolve '-fx-text-base-color' while resolving lookups for '-fx-text-fill' from rule '*.label' in stylesheet jar:file:/C:/Program%20Files/Downlord's%20FAF%20Client/lib/downlords-faf-client-1.1.0.jar!/theme/style.css
+2019-12-17 08:50:27.569  WARN 3292 --- [JavaFX Application Thread] javafx.css                               : Could not resolve '-fx-text-base-color' while resolving lookups for '-fx-text-fill' from rule '*.label' in stylesheet jar:file:/C:/Program%20Files/Downlord's%20FAF%20Client/lib/downlords-faf-client-1.1.0.jar!/theme/style.css
+2019-12-17 08:50:27.570  WARN 3292 --- [JavaFX Application Thread] javafx.css                               : Could not resolve '-fx-text-base-color' while resolving lookups for '-fx-text-fill' from rule '*.label' in stylesheet jar:file:/C:/Program%20Files/Downlord's%20FAF%20Client/lib/downlords-faf-client-1.1.0.jar!/theme/style.css
+2019-12-17 08:50:27.571  WARN 3292 --- [JavaFX Application Thread] javafx.css                               : Could not resolve '-fx-text-base-color' while resolving lookups for '-fx-text-fill' from rule '*.label' in stylesheet jar:file:/C:/Program%20Files/Downlord's%20FAF%20Client/lib/downlords-faf-client-1.1.0.jar!/theme/style.css
+2019-12-17 08:52:13.319  INFO 3292 --- [pool-3-thread-7] c.f.c.patch.GameBinariesUpdateTaskImpl   : Updating binaries to 3709
+2019-12-17 08:52:13.994  INFO 3292 --- [pool-3-thread-10] c.faforever.client.map.DownloadMapTask   : Downloading map x1mp_008 from https://content.faforever.com/faf/vault/maps/x1mp_008.zip
+2019-12-17 08:52:26.742  WARN 3292 --- [JavaFX Application Thread] com.faforever.client.game.GameService    : Game could not be joined
+
+java.util.concurrent.CompletionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture.complete(Unknown Source)
+	at com.faforever.client.task.CompletableTask.lambda$new$2(CompletableTask.java:18)
+	at javafx.base/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(Unknown Source)
+	at javafx.base/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(Unknown Source)
+	at javafx.base/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(Unknown Source)
+	at javafx.base/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at javafx.base/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at javafx.base/com.sun.javafx.event.EventUtil.fireEventImpl(Unknown Source)
+	at javafx.base/com.sun.javafx.event.EventUtil.fireEvent(Unknown Source)
+	at javafx.base/javafx.event.Event.fireEvent(Unknown Source)
+	at javafx.graphics/javafx.concurrent.EventHelper.fireEvent(Unknown Source)
+	at javafx.graphics/javafx.concurrent.Task.fireEvent(Unknown Source)
+	at javafx.graphics/javafx.concurrent.Task.setState(Unknown Source)
+	at javafx.graphics/javafx.concurrent.Task$TaskCallable.lambda$call$1(Unknown Source)
+	at javafx.graphics/com.sun.javafx.application.PlatformImpl.lambda$runLater$9(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at javafx.graphics/com.sun.javafx.application.PlatformImpl.lambda$runLater$10(Unknown Source)
+	at javafx.graphics/com.sun.glass.ui.InvokeLaterDispatcher$Future.run(Unknown Source)
+	at javafx.graphics/com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at javafx.graphics/com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.NullPointerException: null
+	at com.faforever.client.map.MapService.getMapsDirectory(MapService.java:419)
+	at com.faforever.client.map.MapService.lambda$getPathForMapInsensitive$15(MapService.java:433)
+	at com.github.nocatch.NoCatch.noCatch(NoCatch.java:100)
+	at com.github.nocatch.NoCatch.noCatch(NoCatch.java:82)
+	at com.faforever.client.map.MapService.getPathForMapInsensitive(MapService.java:433)
+	at com.faforever.client.map.MapService.lambda$downloadAndInstallMap$18(MapService.java:513)
+	at com.github.nocatch.NoCatch.noCatch(NoCatch.java:49)
+	at com.github.nocatch.NoCatch.noCatch(NoCatch.java:34)
+	at com.faforever.client.map.MapService.lambda$downloadAndInstallMap$19(MapService.java:513)
+	... 23 common frames omitted
+
+2019-12-17 08:52:57.904  INFO 3292 --- [JavaFX Application Thread] com.faforever.client.game.GameService    : Joining game: ' good cpu, ping,  all welcome' (10689635)
+2019-12-17 08:52:58.600  WARN 3292 --- [pool-3-thread-10] c.f.c.patch.BireusFeaturedModUpdater     : Error while testing http://content.faforever.com/bireus/faf/
+
+java.io.FileNotFoundException: http://content.faforever.com/bireus/faf//info.json
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(Unknown Source)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(Unknown Source)
+	at java.base/java.net.URL.openStream(Unknown Source)
+	at com.fasterxml.jackson.core.JsonFactory._optimizedStreamFromURL(JsonFactory.java:1595)
+	at com.fasterxml.jackson.core.JsonFactory.createParser(JsonFactory.java:793)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:2959)
+	at com.faforever.client.patch.BireusFeaturedModUpdater.canUpdate(BireusFeaturedModUpdater.java:57)
+	at com.faforever.client.patch.GameUpdaterImpl.updateFeaturedMod(GameUpdaterImpl.java:159)
+	at com.faforever.client.patch.GameUpdaterImpl.update(GameUpdaterImpl.java:70)
+	at com.faforever.client.game.GameService.updateGameIfNecessary(GameService.java:465)
+	at com.faforever.client.game.GameService.lambda$joinGame$6(GameService.java:298)
+	at java.base/java.util.concurrent.CompletableFuture$UniCompose.tryFire(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+
+2019-12-17 08:53:01.473  INFO 3292 --- [pool-3-thread-7] c.f.c.patch.GameBinariesUpdateTaskImpl   : Updating binaries to 3709
+2019-12-17 08:53:01.828  INFO 3292 --- [pool-3-thread-8] c.faforever.client.map.DownloadMapTask   : Downloading map dualgap_fix_adaptive.v0007 from https://content.faforever.com/faf/vault/maps/dualgap_fix_adaptive.v0007.zip
+2019-12-17 08:53:10.600  WARN 3292 --- [JavaFX Application Thread] com.faforever.client.game.GameService    : Game could not be joined
+
+java.util.concurrent.CompletionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture.complete(Unknown Source)
+	at com.faforever.client.task.CompletableTask.lambda$new$2(CompletableTask.java:18)
+	at javafx.base/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(Unknown Source)
+	at javafx.base/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(Unknown Source)
+	at javafx.base/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(Unknown Source)
+	at javafx.base/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at javafx.base/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at javafx.base/com.sun.javafx.event.EventUtil.fireEventImpl(Unknown Source)
+	at javafx.base/com.sun.javafx.event.EventUtil.fireEvent(Unknown Source)
+	at javafx.base/javafx.event.Event.fireEvent(Unknown Source)
+	at javafx.graphics/javafx.concurrent.EventHelper.fireEvent(Unknown Source)
+	at javafx.graphics/javafx.concurrent.Task.fireEvent(Unknown Source)
+	at javafx.graphics/javafx.concurrent.Task.setState(Unknown Source)
+	at javafx.graphics/javafx.concurrent.Task$TaskCallable.lambda$call$1(Unknown Source)
+	at javafx.graphics/com.sun.javafx.application.PlatformImpl.lambda$runLater$9(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at javafx.graphics/com.sun.javafx.application.PlatformImpl.lambda$runLater$10(Unknown Source)
+	at javafx.graphics/com.sun.glass.ui.InvokeLaterDispatcher$Future.run(Unknown Source)
+	at javafx.graphics/com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at javafx.graphics/com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.NullPointerException: null
+	at java.base/java.nio.file.Files.provider(Unknown Source)
+	at java.base/java.nio.file.Files.newDirectoryStream(Unknown Source)
+	at com.faforever.client.map.MapService.lambda$getPathForMapInsensitive$15(MapService.java:433)
+	at com.github.nocatch.NoCatch.noCatch(NoCatch.java:100)
+	at com.github.nocatch.NoCatch.noCatch(NoCatch.java:82)
+	at com.faforever.client.map.MapService.getPathForMapInsensitive(MapService.java:433)
+	at com.faforever.client.map.MapService.lambda$downloadAndInstallMap$18(MapService.java:513)
+	at com.github.nocatch.NoCatch.noCatch(NoCatch.java:49)
+	at com.github.nocatch.NoCatch.noCatch(NoCatch.java:34)
+	at com.faforever.client.map.MapService.lambda$downloadAndInstallMap$19(MapService.java:513)
+	... 23 common frames omitted
+
+2019-12-17 09:02:02.595  INFO 3292 --- [JavaFX Application Thread] com.faforever.client.game.GameService    : Joining game: 'Welcome, survival fun' (10690194)
+2019-12-17 09:02:03.296  WARN 3292 --- [pool-3-thread-11] c.f.c.patch.BireusFeaturedModUpdater     : Error while testing http://content.faforever.com/bireus/faf/
+
+java.io.FileNotFoundException: http://content.faforever.com/bireus/faf//info.json
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(Unknown Source)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(Unknown Source)
+	at java.base/java.net.URL.openStream(Unknown Source)
+	at com.fasterxml.jackson.core.JsonFactory._optimizedStreamFromURL(JsonFactory.java:1595)
+	at com.fasterxml.jackson.core.JsonFactory.createParser(JsonFactory.java:793)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:2959)
+	at com.faforever.client.patch.BireusFeaturedModUpdater.canUpdate(BireusFeaturedModUpdater.java:57)
+	at com.faforever.client.patch.GameUpdaterImpl.updateFeaturedMod(GameUpdaterImpl.java:159)
+	at com.faforever.client.patch.GameUpdaterImpl.update(GameUpdaterImpl.java:70)
+	at com.faforever.client.game.GameService.updateGameIfNecessary(GameService.java:465)
+	at com.faforever.client.game.GameService.lambda$joinGame$6(GameService.java:298)
+	at java.base/java.util.concurrent.CompletableFuture$UniCompose.tryFire(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+
+2019-12-17 09:02:08.600  INFO 3292 --- [pool-3-thread-12] c.f.c.patch.GameBinariesUpdateTaskImpl   : Updating binaries to 3709
+2019-12-17 09:02:08.952  INFO 3292 --- [pool-3-thread-13] c.faforever.client.map.DownloadMapTask   : Downloading map final_rush_pro_5.v0020 from https://content.faforever.com/faf/vault/maps/final_rush_pro_5.v0020.zip
+2019-12-17 09:02:15.197  WARN 3292 --- [JavaFX Application Thread] com.faforever.client.game.GameService    : Game could not be joined
+
+java.util.concurrent.CompletionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture.complete(Unknown Source)
+	at com.faforever.client.task.CompletableTask.lambda$new$2(CompletableTask.java:18)
+	at javafx.base/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(Unknown Source)
+	at javafx.base/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(Unknown Source)
+	at javafx.base/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(Unknown Source)
+	at javafx.base/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at javafx.base/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at javafx.base/com.sun.javafx.event.EventUtil.fireEventImpl(Unknown Source)
+	at javafx.base/com.sun.javafx.event.EventUtil.fireEvent(Unknown Source)
+	at javafx.base/javafx.event.Event.fireEvent(Unknown Source)
+	at javafx.graphics/javafx.concurrent.EventHelper.fireEvent(Unknown Source)
+	at javafx.graphics/javafx.concurrent.Task.fireEvent(Unknown Source)
+	at javafx.graphics/javafx.concurrent.Task.setState(Unknown Source)
+	at javafx.graphics/javafx.concurrent.Task$TaskCallable.lambda$call$1(Unknown Source)
+	at javafx.graphics/com.sun.javafx.application.PlatformImpl.lambda$runLater$9(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at javafx.graphics/com.sun.javafx.application.PlatformImpl.lambda$runLater$10(Unknown Source)
+	at javafx.graphics/com.sun.glass.ui.InvokeLaterDispatcher$Future.run(Unknown Source)
+	at javafx.graphics/com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at javafx.graphics/com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.NullPointerException: null
+	at java.base/java.nio.file.Files.provider(Unknown Source)
+	at java.base/java.nio.file.Files.newDirectoryStream(Unknown Source)
+	at com.faforever.client.map.MapService.lambda$getPathForMapInsensitive$15(MapService.java:433)
+	at com.github.nocatch.NoCatch.noCatch(NoCatch.java:100)
+	at com.github.nocatch.NoCatch.noCatch(NoCatch.java:82)
+	at com.faforever.client.map.MapService.getPathForMapInsensitive(MapService.java:433)
+	at com.faforever.client.map.MapService.lambda$downloadAndInstallMap$18(MapService.java:513)
+	at com.github.nocatch.NoCatch.noCatch(NoCatch.java:49)
+	at com.github.nocatch.NoCatch.noCatch(NoCatch.java:34)
+	at com.faforever.client.map.MapService.lambda$downloadAndInstallMap$19(MapService.java:513)
+	... 23 common frames omitted
+
+2019-12-17 09:02:57.445  INFO 3292 --- [JavaFX Application Thread] com.faforever.client.game.GameService    : Joining game: 'Noob game, <900' (10690215)
+2019-12-17 09:02:58.129  WARN 3292 --- [pool-3-thread-13] c.f.c.patch.BireusFeaturedModUpdater     : Error while testing http://content.faforever.com/bireus/faf/
+
+java.io.FileNotFoundException: http://content.faforever.com/bireus/faf//info.json
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(Unknown Source)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(Unknown Source)
+	at java.base/java.net.URL.openStream(Unknown Source)
+	at com.fasterxml.jackson.core.JsonFactory._optimizedStreamFromURL(JsonFactory.java:1595)
+	at com.fasterxml.jackson.core.JsonFactory.createParser(JsonFactory.java:793)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:2959)
+	at com.faforever.client.patch.BireusFeaturedModUpdater.canUpdate(BireusFeaturedModUpdater.java:57)
+	at com.faforever.client.patch.GameUpdaterImpl.updateFeaturedMod(GameUpdaterImpl.java:159)
+	at com.faforever.client.patch.GameUpdaterImpl.update(GameUpdaterImpl.java:70)
+	at com.faforever.client.game.GameService.updateGameIfNecessary(GameService.java:465)
+	at com.faforever.client.game.GameService.lambda$joinGame$6(GameService.java:298)
+	at java.base/java.util.concurrent.CompletableFuture$UniCompose.tryFire(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+
+2019-12-17 09:02:59.634  INFO 3292 --- [pool-3-thread-11] c.f.c.patch.GameBinariesUpdateTaskImpl   : Updating binaries to 3709
+2019-12-17 09:02:59.737  INFO 3292 --- [pool-3-thread-13] c.faforever.client.map.DownloadMapTask   : Downloading map dual_gap_fix.v0002.v0002 from https://content.faforever.com/faf/vault/maps/dual_gap_fix.v0002.v0002.zip
+2019-12-17 09:03:10.202  WARN 3292 --- [JavaFX Application Thread] com.faforever.client.game.GameService    : Game could not be joined
+
+java.util.concurrent.CompletionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture.complete(Unknown Source)
+	at com.faforever.client.task.CompletableTask.lambda$new$2(CompletableTask.java:18)
+	at javafx.base/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(Unknown Source)
+	at javafx.base/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(Unknown Source)
+	at javafx.base/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(Unknown Source)
+	at javafx.base/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at javafx.base/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at javafx.base/com.sun.javafx.event.EventUtil.fireEventImpl(Unknown Source)
+	at javafx.base/com.sun.javafx.event.EventUtil.fireEvent(Unknown Source)
+	at javafx.base/javafx.event.Event.fireEvent(Unknown Source)
+	at javafx.graphics/javafx.concurrent.EventHelper.fireEvent(Unknown Source)
+	at javafx.graphics/javafx.concurrent.Task.fireEvent(Unknown Source)
+	at javafx.graphics/javafx.concurrent.Task.setState(Unknown Source)
+	at javafx.graphics/javafx.concurrent.Task$TaskCallable.lambda$call$1(Unknown Source)
+	at javafx.graphics/com.sun.javafx.application.PlatformImpl.lambda$runLater$9(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at javafx.graphics/com.sun.javafx.application.PlatformImpl.lambda$runLater$10(Unknown Source)
+	at javafx.graphics/com.sun.glass.ui.InvokeLaterDispatcher$Future.run(Unknown Source)
+	at javafx.graphics/com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at javafx.graphics/com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.NullPointerException: null
+	at java.base/java.nio.file.Files.provider(Unknown Source)
+	at java.base/java.nio.file.Files.newDirectoryStream(Unknown Source)
+	at com.faforever.client.map.MapService.lambda$getPathForMapInsensitive$15(MapService.java:433)
+	at com.github.nocatch.NoCatch.noCatch(NoCatch.java:100)
+	at com.github.nocatch.NoCatch.noCatch(NoCatch.java:82)
+	at com.faforever.client.map.MapService.getPathForMapInsensitive(MapService.java:433)
+	at com.faforever.client.map.MapService.lambda$downloadAndInstallMap$18(MapService.java:513)
+	at com.github.nocatch.NoCatch.noCatch(NoCatch.java:49)
+	at com.github.nocatch.NoCatch.noCatch(NoCatch.java:34)
+	at com.faforever.client.map.MapService.lambda$downloadAndInstallMap$19(MapService.java:513)
+	... 23 common frames omitted
+
+2019-12-17 09:04:31.121  INFO 3292 --- [JavaFX Application Thread] com.faforever.client.game.GameService    : Joining game: 'Noob game, <900' (10690215)
+2019-12-17 09:04:31.814  WARN 3292 --- [pool-3-thread-14] c.f.c.patch.BireusFeaturedModUpdater     : Error while testing http://content.faforever.com/bireus/faf/
+
+java.io.FileNotFoundException: http://content.faforever.com/bireus/faf//info.json
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(Unknown Source)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(Unknown Source)
+	at java.base/java.net.URL.openStream(Unknown Source)
+	at com.fasterxml.jackson.core.JsonFactory._optimizedStreamFromURL(JsonFactory.java:1595)
+	at com.fasterxml.jackson.core.JsonFactory.createParser(JsonFactory.java:793)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:2959)
+	at com.faforever.client.patch.BireusFeaturedModUpdater.canUpdate(BireusFeaturedModUpdater.java:57)
+	at com.faforever.client.patch.GameUpdaterImpl.updateFeaturedMod(GameUpdaterImpl.java:159)
+	at com.faforever.client.patch.GameUpdaterImpl.update(GameUpdaterImpl.java:70)
+	at com.faforever.client.game.GameService.updateGameIfNecessary(GameService.java:465)
+	at com.faforever.client.game.GameService.lambda$joinGame$6(GameService.java:298)
+	at java.base/java.util.concurrent.CompletableFuture$UniCompose.tryFire(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+
+2019-12-17 09:04:32.709  INFO 3292 --- [pool-3-thread-15] c.f.c.patch.GameBinariesUpdateTaskImpl   : Updating binaries to 3709
+2019-12-17 09:04:32.783  INFO 3292 --- [pool-3-thread-16] c.faforever.client.map.DownloadMapTask   : Downloading map dual_gap_fix.v0002.v0002 from https://content.faforever.com/faf/vault/maps/dual_gap_fix.v0002.v0002.zip
+2019-12-17 09:04:37.413  WARN 3292 --- [JavaFX Application Thread] com.faforever.client.game.GameService    : Game could not be joined
+
+java.util.concurrent.CompletionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture.complete(Unknown Source)
+	at com.faforever.client.task.CompletableTask.lambda$new$2(CompletableTask.java:18)
+	at javafx.base/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(Unknown Source)
+	at javafx.base/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(Unknown Source)
+	at javafx.base/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(Unknown Source)
+	at javafx.base/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at javafx.base/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at javafx.base/com.sun.javafx.event.EventUtil.fireEventImpl(Unknown Source)
+	at javafx.base/com.sun.javafx.event.EventUtil.fireEvent(Unknown Source)
+	at javafx.base/javafx.event.Event.fireEvent(Unknown Source)
+	at javafx.graphics/javafx.concurrent.EventHelper.fireEvent(Unknown Source)
+	at javafx.graphics/javafx.concurrent.Task.fireEvent(Unknown Source)
+	at javafx.graphics/javafx.concurrent.Task.setState(Unknown Source)
+	at javafx.graphics/javafx.concurrent.Task$TaskCallable.lambda$call$1(Unknown Source)
+	at javafx.graphics/com.sun.javafx.application.PlatformImpl.lambda$runLater$9(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at javafx.graphics/com.sun.javafx.application.PlatformImpl.lambda$runLater$10(Unknown Source)
+	at javafx.graphics/com.sun.glass.ui.InvokeLaterDispatcher$Future.run(Unknown Source)
+	at javafx.graphics/com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at javafx.graphics/com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.NullPointerException: null
+	at java.base/java.nio.file.Files.provider(Unknown Source)
+	at java.base/java.nio.file.Files.newDirectoryStream(Unknown Source)
+	at com.faforever.client.map.MapService.lambda$getPathForMapInsensitive$15(MapService.java:433)
+	at com.github.nocatch.NoCatch.noCatch(NoCatch.java:100)
+	at com.github.nocatch.NoCatch.noCatch(NoCatch.java:82)
+	at com.faforever.client.map.MapService.getPathForMapInsensitive(MapService.java:433)
+	at com.faforever.client.map.MapService.lambda$downloadAndInstallMap$18(MapService.java:513)
+	at com.github.nocatch.NoCatch.noCatch(NoCatch.java:49)
+	at com.github.nocatch.NoCatch.noCatch(NoCatch.java:34)
+	at com.faforever.client.map.MapService.lambda$downloadAndInstallMap$19(MapService.java:513)
+	... 23 common frames omitted
+
+2019-12-17 09:07:28.260  WARN 3292 --- [JavaFX Application Thread] c.f.c.patch.BireusFeaturedModUpdater     : Error while testing http://content.faforever.com/bireus/tutorials/
+
+java.io.FileNotFoundException: http://content.faforever.com/bireus/tutorials//info.json
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(Unknown Source)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(Unknown Source)
+	at java.base/java.net.URL.openStream(Unknown Source)
+	at com.fasterxml.jackson.core.JsonFactory._optimizedStreamFromURL(JsonFactory.java:1595)
+	at com.fasterxml.jackson.core.JsonFactory.createParser(JsonFactory.java:793)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:2959)
+	at com.faforever.client.patch.BireusFeaturedModUpdater.canUpdate(BireusFeaturedModUpdater.java:57)
+	at com.faforever.client.patch.GameUpdaterImpl.updateFeaturedMod(GameUpdaterImpl.java:159)
+	at com.faforever.client.patch.GameUpdaterImpl.update(GameUpdaterImpl.java:70)
+	at com.faforever.client.game.GameService.updateGameIfNecessary(GameService.java:465)
+	at com.faforever.client.game.GameService.lambda$launchTutorial$42(GameService.java:818)
+	at java.base/java.util.concurrent.CompletableFuture.uniComposeStage(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture.thenCompose(Unknown Source)
+	at com.faforever.client.game.GameService.launchTutorial(GameService.java:818)
+	at com.faforever.client.tutorial.TutorialService.launchTutorial(TutorialService.java:29)
+	at com.faforever.client.tutorial.TutorialDetailController.launchReplay(TutorialDetailController.java:58)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at com.sun.javafx.reflect.Trampoline.invoke(Unknown Source)
+	at jdk.internal.reflect.GeneratedMethodAccessor17.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at javafx.base/com.sun.javafx.reflect.MethodUtil.invoke(Unknown Source)
+	at javafx.fxml/com.sun.javafx.fxml.MethodHelper.invoke(Unknown Source)
+	at javafx.fxml/javafx.fxml.FXMLLoader$MethodHandler.invoke(Unknown Source)
+	at javafx.fxml/javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(Unknown Source)
+	at javafx.base/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(Unknown Source)
+	at javafx.base/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(Unknown Source)
+	at javafx.base/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(Unknown Source)
+	at javafx.base/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(Unknown Source)
+	at javafx.base/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at javafx.base/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at javafx.base/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at javafx.base/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at javafx.base/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at javafx.base/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at javafx.base/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at javafx.base/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at javafx.base/com.sun.javafx.event.EventUtil.fireEventImpl(Unknown Source)
+	at javafx.base/com.sun.javafx.event.EventUtil.fireEvent(Unknown Source)
+	at javafx.base/javafx.event.Event.fireEvent(Unknown Source)
+	at javafx.graphics/javafx.scene.Scene$ClickGenerator.postProcess(Unknown Source)
+	at javafx.graphics/javafx.scene.Scene$ClickGenerator.access$8300(Unknown Source)
+	at javafx.graphics/javafx.scene.Scene$MouseHandler.process(Unknown Source)
+	at javafx.graphics/javafx.scene.Scene$MouseHandler.access$1300(Unknown Source)
+	at javafx.graphics/javafx.scene.Scene.processMouseEvent(Unknown Source)
+	at javafx.graphics/javafx.scene.Scene$ScenePeerListener.mouseEvent(Unknown Source)
+	at javafx.graphics/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(Unknown Source)
+	at javafx.graphics/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at javafx.graphics/com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$2(Unknown Source)
+	at javafx.graphics/com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(Unknown Source)
+	at javafx.graphics/com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(Unknown Source)
+	at javafx.graphics/com.sun.glass.ui.View.handleMouseEvent(Unknown Source)
+	at javafx.graphics/com.sun.glass.ui.View.notifyMouse(Unknown Source)
+	at javafx.graphics/com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at javafx.graphics/com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+
+2019-12-17 09:09:19.087  WARN 3292 --- [pool-3-thread-18] c.f.c.patch.BireusFeaturedModUpdater     : Error while testing http://content.faforever.com/bireus/faf/
+
+java.io.FileNotFoundException: http://content.faforever.com/bireus/faf//info.json
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(Unknown Source)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(Unknown Source)
+	at java.base/java.net.URL.openStream(Unknown Source)
+	at com.fasterxml.jackson.core.JsonFactory._optimizedStreamFromURL(JsonFactory.java:1595)
+	at com.fasterxml.jackson.core.JsonFactory.createParser(JsonFactory.java:793)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:2959)
+	at com.faforever.client.patch.BireusFeaturedModUpdater.canUpdate(BireusFeaturedModUpdater.java:57)
+	at com.faforever.client.patch.GameUpdaterImpl.updateFeaturedMod(GameUpdaterImpl.java:159)
+	at com.faforever.client.patch.GameUpdaterImpl.lambda$update$2(GameUpdaterImpl.java:76)
+	at java.base/java.util.concurrent.CompletableFuture$UniCompose.tryFire(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+
+2019-12-17 09:09:20.023  INFO 3292 --- [pool-3-thread-18] c.f.c.patch.GameBinariesUpdateTaskImpl   : Updating binaries to 3709
+2019-12-17 09:09:20.162  INFO 3292 --- [pool-3-thread-19] c.faforever.client.map.DownloadMapTask   : Downloading map scmp_031_ai.v0001 from https://content.faforever.com/faf/vault/maps/scmp_031_ai.v0001.zip
+2019-12-17 09:09:27.093 ERROR 3292 --- [JavaFX Application Thread] com.faforever.client.game.GameService    : Launching tutorials failed
+
+java.util.concurrent.CompletionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture.complete(Unknown Source)
+	at com.faforever.client.task.CompletableTask.lambda$new$2(CompletableTask.java:18)
+	at javafx.base/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(Unknown Source)
+	at javafx.base/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(Unknown Source)
+	at javafx.base/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(Unknown Source)
+	at javafx.base/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at javafx.base/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at javafx.base/com.sun.javafx.event.EventUtil.fireEventImpl(Unknown Source)
+	at javafx.base/com.sun.javafx.event.EventUtil.fireEvent(Unknown Source)
+	at javafx.base/javafx.event.Event.fireEvent(Unknown Source)
+	at javafx.graphics/javafx.concurrent.EventHelper.fireEvent(Unknown Source)
+	at javafx.graphics/javafx.concurrent.Task.fireEvent(Unknown Source)
+	at javafx.graphics/javafx.concurrent.Task.setState(Unknown Source)
+	at javafx.graphics/javafx.concurrent.Task$TaskCallable.lambda$call$1(Unknown Source)
+	at javafx.graphics/com.sun.javafx.application.PlatformImpl.lambda$runLater$9(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at javafx.graphics/com.sun.javafx.application.PlatformImpl.lambda$runLater$10(Unknown Source)
+	at javafx.graphics/com.sun.glass.ui.InvokeLaterDispatcher$Future.run(Unknown Source)
+	at javafx.graphics/com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at javafx.graphics/com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.NullPointerException: null
+	at java.base/java.nio.file.Files.provider(Unknown Source)
+	at java.base/java.nio.file.Files.newDirectoryStream(Unknown Source)
+	at com.faforever.client.map.MapService.lambda$getPathForMapInsensitive$15(MapService.java:433)
+	at com.github.nocatch.NoCatch.noCatch(NoCatch.java:100)
+	at com.github.nocatch.NoCatch.noCatch(NoCatch.java:82)
+	at com.faforever.client.map.MapService.getPathForMapInsensitive(MapService.java:433)
+	at com.faforever.client.map.MapService.lambda$downloadAndInstallMap$18(MapService.java:513)
+	at com.github.nocatch.NoCatch.noCatch(NoCatch.java:49)
+	at com.github.nocatch.NoCatch.noCatch(NoCatch.java:34)
+	at com.faforever.client.map.MapService.lambda$downloadAndInstallMap$19(MapService.java:513)
+	... 23 common frames omitted
+
+2019-12-17 09:53:15.985  INFO 3292 --- [JavaFX Application Thread] com.faforever.client.game.GameService    : Joining game: 'All welcome - FFA' (10690357)
+2019-12-17 09:53:16.684  WARN 3292 --- [pool-3-thread-38] c.f.c.patch.BireusFeaturedModUpdater     : Error while testing http://content.faforever.com/bireus/faf/
+
+java.io.FileNotFoundException: http://content.faforever.com/bireus/faf//info.json
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(Unknown Source)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(Unknown Source)
+	at java.base/java.net.URL.openStream(Unknown Source)
+	at com.fasterxml.jackson.core.JsonFactory._optimizedStreamFromURL(JsonFactory.java:1595)
+	at com.fasterxml.jackson.core.JsonFactory.createParser(JsonFactory.java:793)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:2959)
+	at com.faforever.client.patch.BireusFeaturedModUpdater.canUpdate(BireusFeaturedModUpdater.java:57)
+	at com.faforever.client.patch.GameUpdaterImpl.updateFeaturedMod(GameUpdaterImpl.java:159)
+	at com.faforever.client.patch.GameUpdaterImpl.update(GameUpdaterImpl.java:70)
+	at com.faforever.client.game.GameService.updateGameIfNecessary(GameService.java:465)
+	at com.faforever.client.game.GameService.lambda$joinGame$6(GameService.java:298)
+	at java.base/java.util.concurrent.CompletableFuture$UniCompose.tryFire(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+
+2019-12-17 09:53:17.975  INFO 3292 --- [pool-3-thread-38] com.faforever.client.mod.InstallModTask  : Downloading mod http://content.faforever.com/mods/quality_of_performance.v0002.zip to C:\ProgramData\FAForever\cache\mod10333345015105334417.tmp
+2019-12-17 09:53:20.781  INFO 3292 --- [pool-3-thread-38] com.faforever.client.mod.InstallModTask  : Unzipping C:\ProgramData\FAForever\cache\mod10333345015105334417.tmp to C:\Users\Owner\Documents\My Games\Gas Powered Games\Supreme Commander Forged Alliance\mods
+2019-12-17 09:53:21.395  INFO 3292 --- [pool-3-thread-37] c.f.c.patch.GameBinariesUpdateTaskImpl   : Updating binaries to 3709
+2019-12-17 09:53:21.520  INFO 3292 --- [pool-3-thread-38] c.faforever.client.map.DownloadMapTask   : Downloading map scmp_006 from https://content.faforever.com/faf/vault/maps/scmp_006.zip
+2019-12-17 09:53:35.489  WARN 3292 --- [JavaFX Application Thread] com.faforever.client.game.GameService    : Game could not be joined
+
+java.util.concurrent.CompletionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture.complete(Unknown Source)
+	at com.faforever.client.task.CompletableTask.lambda$new$2(CompletableTask.java:18)
+	at javafx.base/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(Unknown Source)
+	at javafx.base/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(Unknown Source)
+	at javafx.base/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(Unknown Source)
+	at javafx.base/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at javafx.base/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at javafx.base/com.sun.javafx.event.EventUtil.fireEventImpl(Unknown Source)
+	at javafx.base/com.sun.javafx.event.EventUtil.fireEvent(Unknown Source)
+	at javafx.base/javafx.event.Event.fireEvent(Unknown Source)
+	at javafx.graphics/javafx.concurrent.EventHelper.fireEvent(Unknown Source)
+	at javafx.graphics/javafx.concurrent.Task.fireEvent(Unknown Source)
+	at javafx.graphics/javafx.concurrent.Task.setState(Unknown Source)
+	at javafx.graphics/javafx.concurrent.Task$TaskCallable.lambda$call$1(Unknown Source)
+	at javafx.graphics/com.sun.javafx.application.PlatformImpl.lambda$runLater$9(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at javafx.graphics/com.sun.javafx.application.PlatformImpl.lambda$runLater$10(Unknown Source)
+	at javafx.graphics/com.sun.glass.ui.InvokeLaterDispatcher$Future.run(Unknown Source)
+	at javafx.graphics/com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at javafx.graphics/com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.NullPointerException: null
+	at com.faforever.client.map.MapService.getMapsDirectory(MapService.java:419)
+	at com.faforever.client.map.MapService.lambda$getPathForMapInsensitive$15(MapService.java:433)
+	at com.github.nocatch.NoCatch.noCatch(NoCatch.java:100)
+	at com.github.nocatch.NoCatch.noCatch(NoCatch.java:82)
+	at com.faforever.client.map.MapService.getPathForMapInsensitive(MapService.java:433)
+	at com.faforever.client.map.MapService.lambda$downloadAndInstallMap$18(MapService.java:513)
+	at com.github.nocatch.NoCatch.noCatch(NoCatch.java:49)
+	at com.github.nocatch.NoCatch.noCatch(NoCatch.java:34)
+	at com.faforever.client.map.MapService.lambda$downloadAndInstallMap$19(MapService.java:513)
+	... 23 common frames omitted
+
+2019-12-17 09:58:28.422  INFO 3292 --- [JavaFX Application Thread] com.faforever.client.game.GameService    : Joining game: ' good cpu, ping,  all welcome' (10689635)
+2019-12-17 09:58:29.118  WARN 3292 --- [pool-3-thread-37] c.f.c.patch.BireusFeaturedModUpdater     : Error while testing http://content.faforever.com/bireus/faf/
+
+java.io.FileNotFoundException: http://content.faforever.com/bireus/faf//info.json
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(Unknown Source)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(Unknown Source)
+	at java.base/java.net.URL.openStream(Unknown Source)
+	at com.fasterxml.jackson.core.JsonFactory._optimizedStreamFromURL(JsonFactory.java:1595)
+	at com.fasterxml.jackson.core.JsonFactory.createParser(JsonFactory.java:793)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:2959)
+	at com.faforever.client.patch.BireusFeaturedModUpdater.canUpdate(BireusFeaturedModUpdater.java:57)
+	at com.faforever.client.patch.GameUpdaterImpl.updateFeaturedMod(GameUpdaterImpl.java:159)
+	at com.faforever.client.patch.GameUpdaterImpl.update(GameUpdaterImpl.java:70)
+	at com.faforever.client.game.GameService.updateGameIfNecessary(GameService.java:465)
+	at com.faforever.client.game.GameService.lambda$joinGame$6(GameService.java:298)
+	at java.base/java.util.concurrent.CompletableFuture$UniCompose.tryFire(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+
+2019-12-17 09:58:30.089  INFO 3292 --- [pool-3-thread-43] c.f.c.patch.GameBinariesUpdateTaskImpl   : Updating binaries to 3709
+2019-12-17 09:58:30.348  INFO 3292 --- [pool-3-thread-38] c.faforever.client.map.DownloadMapTask   : Downloading map dualgap_fix_adaptive.v0007 from https://content.faforever.com/faf/vault/maps/dualgap_fix_adaptive.v0007.zip
+2019-12-17 09:58:40.920  WARN 3292 --- [JavaFX Application Thread] com.faforever.client.game.GameService    : Game could not be joined
+
+java.util.concurrent.CompletionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture.complete(Unknown Source)
+	at com.faforever.client.task.CompletableTask.lambda$new$2(CompletableTask.java:18)
+	at javafx.base/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(Unknown Source)
+	at javafx.base/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(Unknown Source)
+	at javafx.base/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(Unknown Source)
+	at javafx.base/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(Unknown Source)
+	at javafx.base/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(Unknown Source)
+	at javafx.base/com.sun.javafx.event.EventUtil.fireEventImpl(Unknown Source)
+	at javafx.base/com.sun.javafx.event.EventUtil.fireEvent(Unknown Source)
+	at javafx.base/javafx.event.Event.fireEvent(Unknown Source)
+	at javafx.graphics/javafx.concurrent.EventHelper.fireEvent(Unknown Source)
+	at javafx.graphics/javafx.concurrent.Task.fireEvent(Unknown Source)
+	at javafx.graphics/javafx.concurrent.Task.setState(Unknown Source)
+	at javafx.graphics/javafx.concurrent.Task$TaskCallable.lambda$call$1(Unknown Source)
+	at javafx.graphics/com.sun.javafx.application.PlatformImpl.lambda$runLater$9(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at javafx.graphics/com.sun.javafx.application.PlatformImpl.lambda$runLater$10(Unknown Source)
+	at javafx.graphics/com.sun.glass.ui.InvokeLaterDispatcher$Future.run(Unknown Source)
+	at javafx.graphics/com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at javafx.graphics/com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.NullPointerException: null
+	at java.base/java.nio.file.Files.provider(Unknown Source)
+	at java.base/java.nio.file.Files.newDirectoryStream(Unknown Source)
+	at com.faforever.client.map.MapService.lambda$getPathForMapInsensitive$15(MapService.java:433)
+	at com.github.nocatch.NoCatch.noCatch(NoCatch.java:100)
+	at com.github.nocatch.NoCatch.noCatch(NoCatch.java:82)
+	at com.faforever.client.map.MapService.getPathForMapInsensitive(MapService.java:433)
+	at com.faforever.client.map.MapService.lambda$downloadAndInstallMap$18(MapService.java:513)
+	at com.github.nocatch.NoCatch.noCatch(NoCatch.java:49)
+	at com.github.nocatch.NoCatch.noCatch(NoCatch.java:34)
+	at com.faforever.client.map.MapService.lambda$downloadAndInstallMap$19(MapService.java:513)
+	... 23 common frames omitted
+
